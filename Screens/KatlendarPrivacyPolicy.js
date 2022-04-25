@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { Colors } from '../components/styles';
@@ -11,31 +11,31 @@ const width = Dimensions.get('screen').width / 2 - 30
 
 const KatlendarPrivacyPolicy = ({ navigation }) => {
 
-    
-    return(
-        <SafeAreaView style={{flex: 1, paddingHorizontal: 20, backgroundColor: Colors.white}}>
+
+    return (
+        <SafeAreaView style={{ flex: 1, paddingHorizontal: 20, backgroundColor: Colors.white }}>
             <ScrollView>
                 <View style={style.header}>
-                    <View style={{flexDirection: 'row', marginLeft:70}}>
-                        <Image source={require('C:/Users/aaron/katlendar_project/assets/bearkatface.png')}style={{width: 50, height: 60, marginRight: 10}}/>
-                        <Text style={{fontSize: 40, fontWeight: 'bold', color: Colors.orange, marginTop: 17 }}>KATlendar</Text>
+                    <View style={{ flexDirection: 'row', marginLeft: 70 }}>
+                        <Image source={require('./assets/bearkatface.png')} style={{ width: 50, height: 60, marginRight: 10 }} />
+                        <Text style={{ fontSize: 40, fontWeight: 'bold', color: Colors.orange, marginTop: 17 }}>KATlendar</Text>
                     </View>
                 </View>
                 {/* Subheader for Privacy Policy title */}
                 <View style={style.header}>
-                    <Text style={{fontSize: 31, fontWeight: 'bold', color: Colors.black, marginTop: 17, }}>Privacy and Security Policy</Text>
+                    <Text style={{ fontSize: 31, fontWeight: 'bold', color: Colors.black, marginTop: 17, }}>Privacy and Security Policy</Text>
                 </View>
                 {/* Description of the policy */}
-                <Text style={{fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 5, }}>
+                <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 5, }}>
                     {"Your privacy and security are important to us! Please read about how we use and collect your data, and what we do to keep you and your data safe.\n "}
                 </Text>
                 {/* Subheader for Data Collection and Usage */}
                 <View style={style.subheader}>
-                    <Text style={{fontSize: 31, fontWeight: 'bold', color: Colors.black, marginTop: 1, }}>Data Collection & Usage</Text>
+                    <Text style={{ fontSize: 31, fontWeight: 'bold', color: Colors.black, marginTop: 1, }}>Data Collection & Usage</Text>
                 </View>
                 {/* Text for Privacy Policy */}
                 <View style={style.subheader}>
-                    <Text style={{fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1}}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>
                         {"Our applications uses the following personal information from you and for our service: \n \n"}
                         {"Your name, email address, and location data \n \n"}
                         {"This information is only collected to operate our service, and will NOT be sold/shared with any third party. However, we reserve the right to use your data for our own analytical and technical use to imrove the service. \n \n"}
@@ -43,11 +43,11 @@ const KatlendarPrivacyPolicy = ({ navigation }) => {
                 </View>
                 {/* Subheader for Security */}
                 <View style={style.subheader}>
-                    <Text style={{ fontSize: 25, fontWeight: 'bold', color: Colors.black, marginTop: 1}}>Security</Text>
+                    <Text style={{ fontSize: 25, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>Security</Text>
                 </View>
                 {/* Text for Security */}
                 <View style={style.subheader}>
-                    <Text style={{fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1}}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>
                         {"put something"}
                         {"put something"}
                         {"put something"}
@@ -58,13 +58,13 @@ const KatlendarPrivacyPolicy = ({ navigation }) => {
                     </Text>
                 </View>
                 {/* Text for final remarks and last updated */}
-                <View style = {style.header}>
-                    <Text style={{fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1, }}>
+                <View style={style.header}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1, }}>
                         {"Put something"}
                     </Text>
                 </View>
                 <View style={style.subheader}>
-                    <Text style={{fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1}}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>
                         {"Put something"}
                     </Text>
                 </View>
@@ -82,12 +82,12 @@ const KatlendarPrivacyPolicy = ({ navigation }) => {
                 {/* I agree button */}
                 <TouchableOpacity onPress={() => navigation.navigate('Login')} >
                     <View style={style.YesBtn}>
-                        <Text style={{ fontSize: 15, color: Colors.white, fontWeight: 'bold'}}>I Accept</Text>
+                        <Text style={{ fontSize: 15, color: Colors.white, fontWeight: 'bold' }}>I Accept</Text>
                     </View>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
-        
+
     )
 };
 

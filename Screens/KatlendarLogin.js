@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { auth } from '../firebase'
 //icons
-import {Octicons, Ionicons, Fontisto} from '@expo/vector-icons';
+import { Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
 
 //react navigation
 import { useNavigation } from "@react-navigation/native";
@@ -12,24 +12,26 @@ import { useNavigation } from "@react-navigation/native";
 //formik
 import { Formik } from "formik";
 
-import {StyledContainer, 
-        InnerContainer, 
-        PageLogo, PageTitle, 
-        SubTitle, StyledFormArea, 
-        LeftIcon, StyledInputLabel, 
-        StyledTextInput, RightIcon, 
-        Colors, StyledButton, 
-        MsgBox, ButtonText,
-        ExtraText, ExtraView, 
-        TextLink, TextLinkContent, Line } from './../components/styles';
+import {
+    StyledContainer,
+    InnerContainer,
+    PageLogo, PageTitle,
+    SubTitle, StyledFormArea,
+    LeftIcon, StyledInputLabel,
+    StyledTextInput, RightIcon,
+    Colors, StyledButton,
+    MsgBox, ButtonText,
+    ExtraText, ExtraView,
+    TextLink, TextLinkContent, Line
+} from './../components/styles';
 
 import { clickProps } from "react-native-web/dist/cjs/modules/forwardedProps";
-import {View} from 'react-native';
+import { View } from 'react-native';
 
 
-const{brand, darkLight, green, white} = Colors;
+const { brand, darkLight, green, white } = Colors;
 
-const KatlendarLogin = ({navigate}) => {
+const KatlendarLogin = ({ navigate }) => {
     const [hidePassword, setHidePassword] = useState(true);
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -38,42 +40,42 @@ const KatlendarLogin = ({navigate}) => {
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
-            if(user) {
+            if (user) {
                 navigation.navigate("Home")
             }
         })
 
         return unsubscribe
-     }, [])
+    }, [])
 
 
     const handleLogin = () => {
         auth
-        .signInWithEmailAndPassword(email, password)
-        .then(userCredentials => {
-            const user = userCredentials.user;
-            console.log('Logged in With:', user.email);            
-        })
-        .catch(error => alert(error.message))
+            .signInWithEmailAndPassword(email, password)
+            .then(userCredentials => {
+                const user = userCredentials.user;
+                console.log('Logged in With:', user.email);
+            })
+            .catch(error => alert(error.message))
     }
 
     return (
         <StyledContainer>
             <StatusBar style='dark' />
             <InnerContainer>
-                <PageLogo resizeMode="cover" source={require('C:/Users/aaron/katlendar_project/assets/bearkatface.png')} />
+                <PageLogo resizeMode="cover" source={require('./assets/bearkatface.png')} />
                 <PageTitle>KATlendar</PageTitle>
                 <SubTitle>Account Login</SubTitle>
 
                 <Formik
-                    initialValues={{email: '', password: ''}}
+                    initialValues={{ email: '', password: '' }}
                     onSubmit={(values) => {
                         console.log(values);
                     }}
                 >
-                    {({handleChange, handleBlur, handleSubmit, values}) => (<StyledFormArea>
+                    {({ handleChange, handleBlur, handleSubmit, values }) => (<StyledFormArea>
                         <MyTextInput
-                            icon = "mail"
+                            icon="mail"
                             placeholder="Email Address"
                             placeholderTextColor={darkLight}
                             onChangeText={text => setEmail(text)}
@@ -83,7 +85,7 @@ const KatlendarLogin = ({navigate}) => {
                         />
 
                         <MyTextInput
-                            icon = "lock"
+                            icon="lock"
                             placeholder="Password"
                             placeholderTextColor={darkLight}
                             onChangeText={text => setPassword(text)}
@@ -99,9 +101,9 @@ const KatlendarLogin = ({navigate}) => {
                             <ButtonText>Login</ButtonText>
                         </StyledButton>
                         <Line />
-                        <StyledButton google= {true} onPress={handleSubmit}>
-                                <Fontisto name ="google" color ={white} size ={25} /> 
-                            <ButtonText google= {true}>Sign in with Google</ButtonText>
+                        <StyledButton google={true} onPress={handleSubmit}>
+                            <Fontisto name="google" color={white} size={25} />
+                            <ButtonText google={true}>Sign in with Google</ButtonText>
                         </StyledButton >
                         <ExtraView>
                             <ExtraText>Don't have an account? </ExtraText>
@@ -116,17 +118,17 @@ const KatlendarLogin = ({navigate}) => {
     );
 };
 
-const MyTextInput = ({ label, icon, isPassword, hidePassword, setHidePassword, ...props}) => {
+const MyTextInput = ({ label, icon, isPassword, hidePassword, setHidePassword, ...props }) => {
     return (
         <View>
             <LeftIcon>
-                <Octicons name ={icon} size={25} color={brand} />
+                <Octicons name={icon} size={25} color={brand} />
             </LeftIcon>
             <StyledInputLabel>{label}</StyledInputLabel>
-            <StyledTextInput {...props} /> 
+            <StyledTextInput {...props} />
             {isPassword && (
                 <RightIcon onPress={() => setHidePassword(!hidePassword)} >
-                    <Ionicons name={hidePassword ? 'md-eye-off' : 'md-eye'} size={25} color={darkLight}/>
+                    <Ionicons name={hidePassword ? 'md-eye-off' : 'md-eye'} size={25} color={darkLight} />
                 </RightIcon>
             )}
         </View>
