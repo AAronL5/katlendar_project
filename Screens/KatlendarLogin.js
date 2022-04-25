@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { auth } from '../firebase'
+import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 //icons
 import { Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
 
