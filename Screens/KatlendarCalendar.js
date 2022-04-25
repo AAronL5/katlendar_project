@@ -38,14 +38,14 @@ const KatlendarCalendar = ({ navigation }) => {
         textDayHeaderFontSize: 16
       }}
       minDate={"2019-05-01"}
-      maxDate={"2021-05-01"}
+      maxDate={"2023-05-01"}
       onDayPress={day => {
         console.log("selected day", day);
       }}
       markedDates={{
-        "2022-10-16": { selected: true, selectedColor: "red" },
-        "2022-10-17": { selected: true, selectedColor: "blue" },
-        "2022-10-18": { marked: true, dotColor: "red", activeOpacity: 5 }
+        "2022-04-25": { selected: true, selectedColor: "red" },
+        "2022-04-26": { selected: true, selectedColor: "blue" },
+        "2022-04-27": { marked: true, dotColor: "red", activeOpacity: 5 }
       }}
     />
   );
