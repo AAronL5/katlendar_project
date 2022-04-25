@@ -27,9 +27,9 @@ const KatlendarCalendar = ({ navigation }) => {
         arrowColor: "orange",
         monthTextColor: "blue",
         indicatorColor: "blue",
-        textDayFontFamily: "monospace",
-        textMonthFontFamily: "monospace",
-        textDayHeaderFontFamily: "monospace",
+        textDayFontFamily: "Arial",
+        textMonthFontFamily: "Arial",
+        textDayHeaderFontFamily: "Arial",
         textDayFontWeight: "300",
         textMonthFontWeight: "bold",
         textDayHeaderFontWeight: "300",
@@ -38,14 +38,14 @@ const KatlendarCalendar = ({ navigation }) => {
         textDayHeaderFontSize: 16
       }}
       minDate={"2019-05-01"}
-      maxDate={"2021-05-01"}
+      maxDate={"2023-05-01"}
       onDayPress={day => {
         console.log("selected day", day);
       }}
       markedDates={{
-        "2019-10-16": { selected: true, selectedColor: "red" },
-        "2019-10-17": { selected: true, selectedColor: "blue" },
-        "2019-10-18": { marked: true, dotColor: "red", activeOpacity: 5 }
+        "2022-04-25": { selected: true, selectedColor: "red" },
+        "2022-04-26": { selected: true, selectedColor: "blue" },
+        "2022-04-27": { marked: true, dotColor: "red", activeOpacity: 5 }
       }}
     />
   );
