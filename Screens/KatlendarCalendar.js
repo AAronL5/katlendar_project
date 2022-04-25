@@ -27,9 +27,9 @@ const KatlendarCalendar = ({ navigation }) => {
         arrowColor: "orange",
         monthTextColor: "blue",
         indicatorColor: "blue",
-        textDayFontFamily: "monospace",
-        textMonthFontFamily: "monospace",
-        textDayHeaderFontFamily: "monospace",
+        textDayFontFamily: "Arial",
+        textMonthFontFamily: "Arial",
+        textDayHeaderFontFamily: "Arial",
         textDayFontWeight: "300",
         textMonthFontWeight: "bold",
         textDayHeaderFontWeight: "300",
@@ -43,9 +43,9 @@ const KatlendarCalendar = ({ navigation }) => {
         console.log("selected day", day);
       }}
       markedDates={{
-        "2019-10-16": { selected: true, selectedColor: "red" },
-        "2019-10-17": { selected: true, selectedColor: "blue" },
-        "2019-10-18": { marked: true, dotColor: "red", activeOpacity: 5 }
+        "2022-10-16": { selected: true, selectedColor: "red" },
+        "2022-10-17": { selected: true, selectedColor: "blue" },
+        "2022-10-18": { marked: true, dotColor: "red", activeOpacity: 5 }
       }}
     />
   );
