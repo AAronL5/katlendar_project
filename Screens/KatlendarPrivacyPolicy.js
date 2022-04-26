@@ -43,7 +43,7 @@ const KatlendarPrivacyPolicy = ({ navigation }) => {
                 </View>
                 {/* Subheader for Safeguarding and Security */}
                 <View style={style.subheader}>
-                    <Text style={{ fontSize: 25, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>Security</Text>
+                    <Text style={{ fontSize: 31, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>Security</Text>
                 </View>
                 {/* Text for Security */}
                 <View style={style.subheader}>
