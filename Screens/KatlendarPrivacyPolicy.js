@@ -23,11 +23,11 @@ const KatlendarPrivacyPolicy = ({ navigation }) => {
                 </View>
                 {/* Subheader for Privacy Policy title */}
                 <View style={style.header}>
-                    <Text style={{ fontSize: 31, fontWeight: 'bold', color: Colors.black, marginTop: 17, }}>Privacy and Security Policy</Text>
+                    <Text style={{ fontSize: 31, fontWeight: 'bold', color: Colors.black, marginTop: 17, }}>Our Privacy Policy</Text>
                 </View>
                 {/* Description of the policy */}
                 <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 5, }}>
-                    {"Your privacy and security are important to us! Please read about how we use and collect your data, and what we do to keep you and your data safe.\n "}
+                    {"This privacy policy will help you understand how KATlendar uses and protects the data you provide to us when you visit and use KATlendar.\n "}
                 </Text>
                 {/* Subheader for Data Collection and Usage */}
                 <View style={style.subheader}>
@@ -36,36 +36,32 @@ const KatlendarPrivacyPolicy = ({ navigation }) => {
                 {/* Text for Privacy Policy */}
                 <View style={style.subheader}>
                     <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>
-                        {"Our applications uses the following personal information from you and for our service: \n \n"}
-                        {"Your name, email address, and location data \n \n"}
-                        {"This information is only collected to operate our service, and will NOT be sold/shared with any third party. However, we reserve the right to use your data for our own analytical and technical use to imrove the service. \n \n"}
+                        {"Our application collect the following information from you: \n \n"}
+                        {"Your name, email address, location information, and a password you create. \n \n"}
+                        {"This information is only collected to ensure and improve our services to meet your preferences, contact you to remind you about upcoming events, and allow us to create personalized event suggestions for you. \n \n"}
                     </Text>
                 </View>
-                {/* Subheader for Security */}
+                {/* Subheader for Safeguarding and Security */}
                 <View style={style.subheader}>
                     <Text style={{ fontSize: 25, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>Security</Text>
                 </View>
                 {/* Text for Security */}
                 <View style={style.subheader}>
                     <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>
-                        {"put something"}
-                        {"put something"}
-                        {"put something"}
-                        {"put something"}
-                        {"put something"}
-                        {"put something"}
-                        {"put something"}
+                        {"KATlendar is commited to securing your data and keeping it confidential. \n"}
+                        {"KATlendar has done all in its power to prevent data theft, unauthorized access and disclosure by implementing the latest technologies and software. \n"}
+                        {"KATlendar will not lease, sell of distribute your personal information to any third parties, unless we have your permission. \n"}
                     </Text>
                 </View>
-                {/* Text for final remarks and last updated */}
+                {/* Text for final remarks */}
                 <View style={style.header}>
                     <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1, }}>
-                        {"Put something"}
+                        {"We reserve the right to change this policy at any given time, of which you will be promptly updated."}
                     </Text>
                 </View>
                 <View style={style.subheader}>
                     <Text style={{ fontSize: 14, fontWeight: 'bold', color: Colors.black, marginTop: 1 }}>
-                        {"Put something"}
+                        {"Thank you for helping us secure your data and keep it confidential. Enjoy your events! "}
                     </Text>
                 </View>
                 {/* Buttons for declining and accepting the policy */}
