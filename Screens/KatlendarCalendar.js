@@ -24,7 +24,7 @@ const KatlendarCalendar = ({ navigation }) => {
         textDisabledColor: "#d9e1e8",
         dotColor: "#00adf5",
         selectedDotColor: "#ffffff",
-        arrowColor: "orange",
+        arrowColor: "blue",
         monthTextColor: "blue",
         indicatorColor: "blue",
         textDayFontFamily: "Arial",
