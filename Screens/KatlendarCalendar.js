@@ -1,64 +1,81 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
+import React, { useState } from 'react';
+
+// import all the components we are going to use
+import { SafeAreaView, StyleSheet, View, Dimensions } from 'react-native';
+
+//import EventCalendar component
+import EventCalendar from 'react-native-events-calendar';
+
+//get the size of device
+let { width } = Dimensions.get('window');
 
 const KatlendarCalendar = ({ navigation }) => {
+  const [events, setEvents] = useState([
+    {
+      start: '2020-01-01 00:00:00',
+      end: '2020-01-01 02:00:00',
+      title: 'New Year Party',
+      summary: 'xyz Location',
+    },
+    {
+      start: '2020-01-01 01:00:00',
+      end: '2020-01-01 02:00:00',
+      title: 'New Year Wishes',
+      summary: 'Call to every one',
+    },
+    {
+      start: '2020-01-02 00:30:00',
+      end: '2020-01-02 01:30:00',
+      title: 'Parag Birthday Party',
+      summary: 'Call him',
+    },
+    {
+      start: '2020-01-03 01:30:00',
+      end: '2020-01-03 02:20:00',
+      title: 'My Birthday Party',
+      summary: 'Lets Enjoy',
+    },
+    {
+      start: '2020-02-04 04:10:00',
+      end: '2020-02-04 04:40:00',
+      title: 'Engg Expo 2020',
+      summary: 'Expoo Vanue not confirm',
+    },
+  ]);
+
+  const eventClicked = (event) => {
+    //On Click oC a event showing alert from here
+    alert(JSON.stringify(event));
+  };
+
   return (
-    <Calendar
-      style={{
-        borderWidth: 1,
-        borderColor: "gray",
-        height: 350
-      }}
-      theme={{
-        backgroundColor: "#ffffff",
-        calendarBackground: "#ffffff",
-        textSectionTitleColor: "#b6c1cd",
-        selectedDayBackgroundColor: "#00adf5",
-        selectedDayTextColor: "#ffffff",
-        todayTextColor: "#00adf5",
-        dayTextColor: "#2d4150",
-        textDisabledColor: "#d9e1e8",
-        dotColor: "#00adf5",
-        selectedDotColor: "#ffffff",
-        arrowColor: "orange",
-        monthTextColor: "blue",
-        indicatorColor: "blue",
-        textDayFontFamily: "Arial",
-        textMonthFontFamily: "Arial",
-        textDayHeaderFontFamily: "Arial",
-        textDayFontWeight: "300",
-        textMonthFontWeight: "bold",
-        textDayHeaderFontWeight: "300",
-        textDayFontSize: 16,
-        textMonthFontSize: 16,
-        textDayHeaderFontSize: 16
-      }}
-      minDate={"2019-05-01"}
-      maxDate={"2023-05-01"}
-      onDayPress={day => {
-        console.log("selected day", day);
-      }}
-      markedDates={{
-        "2022-04-25": { selected: true, selectedColor: "red" },
-        "2022-04-26": { selected: true, selectedColor: "blue" },
-        "2022-04-27": { marked: true, dotColor: "red", activeOpacity: 5 }
-      }}
-    />
+    <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
+        <EventCalendar
+          eventTapped={eventClicked}
+          //Function on event press
+          events={events}
+          //passing the Array of event
+          width={width}
+          //Container width
+          size={60}
+          //number of date will render before and after initDate
+          //(default is 30 will render 30 day before initDate and 29 day after initDate)
+          initDate={'2020-01-01'}
+          //show initial date (default is today)
+          scrollToFirst
+          //scroll to first event of the day (default true)
+        />
+      </View>
+    </SafeAreaView>
   );
 };
-
+export default KatlendarCalendar;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
-
-export default KatlendarCalendar;
