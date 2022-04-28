@@ -12,34 +12,37 @@ let { width } = Dimensions.get('window');
 const KatlendarCalendar = ({ navigation }) => {
   const [events, setEvents] = useState([
     {
-      start: '2020-01-01 00:00:00',
-      end: '2020-01-01 02:00:00',
-      title: 'New Year Party',
-      summary: 'xyz Location',
+      start: '2022-05-01 01:00:00',
+      end: '2022-05-01 03:00:00',
+      title: 'SHSU Vs Lamar',
+      summary: 'Baseball',
+      summary: 'Elliot T. Bowers Stadium',
     },
     {
-      start: '2020-01-01 01:00:00',
-      end: '2020-01-01 02:00:00',
-      title: 'New Year Wishes',
-      summary: 'Call to every one',
+      start: '2022-05-01 03:00:00',
+      end: '2022-05-01 04:00:00',
+      title: 'Sweat the Stress',
+      summary: 'Join the SHSU Rec Sports for a week of activity to de-stress during finals.',
     },
     {
-      start: '2020-01-02 00:30:00',
-      end: '2020-01-02 01:30:00',
-      title: 'Parag Birthday Party',
-      summary: 'Call him',
+      start: '2022-05-01 01:00:00',
+      end: '2022-05-01 02:30:00',
+      title: 'Waterfall Kayaking with Outdoor Recreation',
+      summary: 'Lets go chasing waterfalls! Join us on a journey up Rocky Creek',
+      summary: 'off of Lake Livingston to find this hidden geological gem. Transportation, lunch, and gear.'
     },
     {
-      start: '2020-01-03 01:30:00',
-      end: '2020-01-03 02:20:00',
-      title: 'My Birthday Party',
-      summary: 'Lets Enjoy',
+      start: '2022-05-02 07:30:00',
+      end: '2022-05-02 09:30:00',
+      title: 'SHSU Harp Ensemble: Harp Impressions',
+      summary: 'Each semester, the School of Music hosts recitals to celebrate the work of musicians and provide valuable experience for students to work in excel',
     },
     {
-      start: '2020-02-04 04:10:00',
-      end: '2020-02-04 04:40:00',
-      title: 'Engg Expo 2020',
-      summary: 'Expoo Vanue not confirm',
+      start: '2022-05-01 01:30:00',
+      end: '2022-05-01 01:50:00',
+      title: 'SHSU Vs Lamar',
+      summary: 'Baseball',
+      summary: 'Elliot T. Bowers Stadium'
     },
   ]);
 
@@ -61,7 +64,7 @@ const KatlendarCalendar = ({ navigation }) => {
           size={60}
           //number of date will render before and after initDate
           //(default is 30 will render 30 day before initDate and 29 day after initDate)
-          initDate={'2020-01-01'}
+          initDate={'2022-05-01'}
           //show initial date (default is today)
           scrollToFirst
           //scroll to first event of the day (default true)

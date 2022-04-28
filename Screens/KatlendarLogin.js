@@ -101,11 +101,6 @@ const KatlendarLogin = ({ navigate }) => {
                         <StyledButton onPress={handleLogin}>
                             <ButtonText>Login</ButtonText>
                         </StyledButton>
-                        <Line />
-                        <StyledButton google={true} onPress={handleSubmit}>
-                            <Fontisto name="google" color={white} size={25} />
-                            <ButtonText google={true}>Sign in with Google</ButtonText>
-                        </StyledButton >
                         <ExtraView>
                             <ExtraText>Don't have an account? </ExtraText>
                             <TextLink onPress={() => navigation.navigate('Signup')}>
