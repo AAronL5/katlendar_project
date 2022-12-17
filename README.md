@@ -1,4 +1,4 @@
-# katlendar_project
+# KATLENDAR Project
 
 README
 
